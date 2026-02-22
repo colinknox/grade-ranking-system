@@ -1,5 +1,3 @@
-GRADES = ["F", "D", "C", "B", "A"]
-
 class Grade:
     def __init__(self, letter):
         self.letter = letter
@@ -14,10 +12,8 @@ class Grade:
         else:
             return False
 
-
-
-b = Grade("B")
-a = Grade("A")
-
-# print(f"DEBUG: Numeric value = {a.get_numeric_value()}")
-print(f"DEBUG: Is better than = {b.is_better_than(a)}")
+    def is_same_as(self, other):
+        if self.grade_index == other.grade_index:
+            return True
+        else:
+            return False
