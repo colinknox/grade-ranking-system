@@ -1,3 +1,5 @@
+GRADES = ["F", "D", "C", "B", "A"]
+
 class Grade:
     def __init__(self, letter):
         self.letter = letter
@@ -7,13 +9,7 @@ class Grade:
         return self.grade_index
     
     def is_better_than(self, other):
-        if self.grade_index > other.grade_index:
-            return True
-        else:
-            return False
+        return self.grade_index > other.grade_index
 
     def is_same_as(self, other):
-        if self.grade_index == other.grade_index:
-            return True
-        else:
-            return False
+        return self.grade_index == other.grade_index
